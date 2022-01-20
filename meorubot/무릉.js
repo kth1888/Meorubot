@@ -5,7 +5,7 @@ function response(room, msg, sender, isGroupChat, replier, ImageDB, packageName,
 
    if(room !=("방이름") && msg.indexOf('!무릉 ') != -1){
       var murung=msg.split(' ');
-      var url = Utils.getWebText("https://maple.gg/u/%22+murung[1]   );
+      var url = Utils.getWebText("https://maple.gg/u/%22+murung[1]");
 
 
       if(url.indexOf('검색결과가 없습니다.') != -1){
