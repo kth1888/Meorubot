@@ -35,7 +35,7 @@ function response(room, msg, sender, isGroupChat, replier, ImageDB, packageName,
       total_meso3=total_meso3.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
       total_meso4=total_meso4.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
-      replier.reply(symbol[0]+'에서 '+symbol[1]+'레벨까지\n요구량:'+total_req+'\n여로:'+total_meso+'메소\n츄츄   :'+total_meso2+'메소\n레헬른   :'+total_meso3+'메소\n그외 나머지   :'+total_meso4+'메소');
+      replier.reply(symbol[0]+'에서 '+symbol[1]+'레벨까지\n요구량:'+total_req+'\n여로:'+total_meso+'메소\n츄츄 :'+total_meso2+'메소\n레헬른 :'+total_meso3+'메소\n그외 나머지 :'+total_meso4+'메소');
    }
 }
 /*심볼 ~에서 ~레벨까지
