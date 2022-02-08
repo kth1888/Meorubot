@@ -54,8 +54,22 @@ function response(room, msg, sender, isGroupChat, replier, ImageDB, packageName,
              scout_rank += scout_floor * 3;
            }
         }
+        var data_union = url.split('bg-yellow">')[1].split('업적')[0].replace(/(<([^>]+)>)/g,"");
+        data_union = data_union.replace(/ /gi, '');
+        data_union = data_union.replace(/\n/gi, '');
+
+        if (data_union.indexOf('기록이없습니다.') != 1){
+           var scout_union = Number(data_union.split('유니온')[1].split('Lv')[0];);
+           if (scout_union >= 8000){
+             scout_rank += 250
+           }
+           else{
+             scout_rank += scout_union / 40
+           }
+        }
         replier.reply(scout_rank);
         replier.reply(scout_floor);
+        replier.reply(scout_union);
         return 0;
      }
 }
