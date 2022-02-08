@@ -1,7 +1,7 @@
 const room_name=["메이플 머루길드 개발진"];  //여기에 채팅방 이름을 입력하세요
 
 function response(room, msg, sender, isGroupChat, replier, ImageDB, packageName, threadId){
-   if(room_name.indexOf(room)!=-1 && (msg.indexOf('!어센틱심볼 ') != -1 || msg.indexOf('!어센틱 ') != -1)){
+   if(room_name.indexOf(room)!=-1 && msg.indexOf('!어센틱 ') != -1){
       msg=msg.replace('!어센틱 ','');
       var symbol=msg.split(' ');
       var total_req=0;
