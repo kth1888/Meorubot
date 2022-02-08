@@ -31,4 +31,31 @@ function response(room, msg, sender, isGroupChat, replier, ImageDB, packageName,
       }
       return;
      }
+     if(msg.indexOf('!스카우터 ') != -1){
+        var scout=msg.split(' ');
+        var url = Utils.getWebText("https://maple.gg/u/"+scout[1]);
+        var scout_rank = 0;
+
+        if(url.indexOf('검색결과가 없습니다.') != -1){
+           replier.reply('[' + scout[1] + ']\n' + '존재하지 않는 캐릭터 입니다.');
+           return;
+        }
+
+        var data_murung = url.split('text-white">')[3].split('더시드')[0].replace(/(<([^>]+)>)/g,"");
+        data_murung = data_murung.replace(/ /gi, '');
+        data_murung = data_murung.replace(/\n/gi, '');
+
+        if (data_murung.indexOf('기록이없습니다.') != 1){
+           var scout_floor = Number(data_murung.split('록')[1].split('층')[0]);
+           if (scout_floor >= 45){
+             scout_rank += scout_floor * 4;
+           }
+           else{
+             scout_rank += scout_floor * 3;
+           }
+        }
+        replier.reply(scout_rank);
+        replier.reply(scout_floor);
+        return 0;
+     }
 }
