@@ -19,7 +19,7 @@ function response(room, msg, sender, isGroupChat, replier, ImageDB, packageName,
          }
       }
       for (i=Number(symbol[1]);i<Number(symbol[2]);i++){
-         total_req+=i*i+28;
+         total_req+=9*i*i+20*i;
          total_meso+=96900000+88500000*i;
          total_meso2+=106600000+97300000*i;
       }
