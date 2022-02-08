@@ -67,6 +67,8 @@ function response(room, msg, sender, isGroupChat, replier, ImageDB, packageName,
              scout_rank += scout_union / 40
            }
         }
+        var data_level = url.split('user-summary-item">')[1].split(')</li>')[0].replace(/(<([^>]+)>)/g,"");
+        replier.reply(data_level);
         replier.reply(scout_rank);
         replier.reply(scout_floor);
         replier.reply(scout_union);
