@@ -14,8 +14,8 @@ function response(room, msg, sender, isGroupChat, replier, ImageDB, packageName,
       }
 
       for(i=0;i<2;i++){
-         if(symbol[i]<1 || symbol[i]>20){
-            replier.reply( '1~20의 수를 입력해야 합니다.');
+         if(symbol[i]<1 || symbol[i]>11){
+            replier.reply( '1~11의 수를 입력해야 합니다.');
             return;
          }
       }
