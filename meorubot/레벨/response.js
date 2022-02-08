@@ -1,4 +1,3 @@
-const scriptName="레벨.js";
 const room_name=["메이플 머루길드 개발진"];  //여기에 채팅방 이름을 입력하세요
 
 const sdcard = android.os.Environment.getExternalStorageDirectory().getAbsolutePath();
