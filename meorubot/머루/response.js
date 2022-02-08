@@ -1,6 +1,4 @@
-const scriptName="도움말.js";
-const room_name=["메이플 머루길드 개발진"];  //여기에 채팅방 이름을 입력하세요
-
+const room_name=["메이플 머루길드 개발진"];
 const sdcard = android.os.Environment.getExternalStorageDirectory().getAbsolutePath();
 const Command = {};
 Command.output = function(msg) {
@@ -35,8 +33,8 @@ Command.output = function(msg) {
 };
 
 function response(room, msg, sender, isGroupChat, replier, ImageDB, packageName, threadId){
-   if(room_name.indexOf(room)!=-1 && msg==('!도움말')) {
-      var data=Command.output("도움말 도움말");
-      replier.reply(data);
-   }
+    if(room_name.indexOf(room)!=-1 && msg==('!도움말')) {
+       var data=Command.output("도움말 도움말");
+       replier.reply(data);
+  }
 }

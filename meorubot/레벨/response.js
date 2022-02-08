@@ -40,7 +40,7 @@ function response(room, msg, sender, isGroupChat, replier, ImageDB, packageName,
 
       url = Utils.getWebText("https://maplestory.nexon.com/Ranking/World/Total?c="+level[1]);
       if(url.indexOf('랭킹정보가 없습니다.') != -1){
-         url = Utils.getWebText("https://maplestory.nexon.com/Ranking/World/Total?c="+level[1]+"&w=254");
+         url = Utils.getWebText("https://maplestory.nexon.com/Ranking/World/Total?c="+level[1]+"&w=0");
       }
       if(url.indexOf('랭킹정보가 없습니다.') != -1){
          replier.reply('랭킹정보가 없습니다.');
