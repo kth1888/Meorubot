@@ -59,19 +59,19 @@ function response(room, msg, sender, isGroupChat, replier, ImageDB, packageName,
         data_union = data_union.replace(/\n/gi, '');
 
         if (data_union.indexOf('기록이없습니다.') != 1){
-           var scout_union = Number(data_union.split('유니온')[1].split('Lv')[0];);
+           var scout_union = Number(data_union.split('Lv.')[1].split('전투력')[0]);
            if (scout_union >= 8000){
-             scout_rank += 250
+             scout_rank += 250;
            }
            else{
-             scout_rank += scout_union / 40
+             scout_rank += (scout_union / 40);
            }
         }
         var data_level = url.split('user-summary-item">')[1].split(')</li>')[0].replace(/(<([^>]+)>)/g,"");
-        replier.reply(data_level);
-        replier.reply(scout_rank);
-        replier.reply(scout_floor);
-        replier.reply(scout_union);
+        scout_level = Number(data_level.replace('Lv.', '').split('(')[0]);
+        scout_rank += scout_level - 100
+
+        replier.reply("lv " + scout_level + "\nunion lv " + scout_union + "\nfloor " + scout_floor + "\nrank " + scout_rank);
         return 0;
      }
 }
