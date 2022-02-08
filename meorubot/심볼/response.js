@@ -8,6 +8,8 @@ function response(room, msg, sender, isGroupChat, replier, ImageDB, packageName,
       var total_req=0;
       var total_meso=0;
       var total_meso2=0;
+      var total_meso3=0;
+      var total_meso4=0;
 
       if(symbol.length != 2){
          replier.reply('두개의 수를 입력해야 합니다.');
@@ -23,13 +25,29 @@ function response(room, msg, sender, isGroupChat, replier, ImageDB, packageName,
 
       for (i=Number(symbol[0]);i<Number(symbol[1]);i++){
          total_req+=i*i+11;
-         total_meso+=12440000+6600000*i;
-         total_meso2+=2370000+7130000*i;
+         total_meso+=3110000+3960000*i;
+         total_meso2+=6220000+4620000*i;
+         total_meso3+=9330000+5280000*i;
+         total_meso4+=11196000+5940000*i;
       }
 
       total_meso=total_meso.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
       total_meso2=total_meso2.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      total_meso3=total_meso3.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      total_meso4=total_meso4.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
-      replier.reply(symbol[0]+'에서 '+symbol[1]+'레벨까지\n요구량:'+total_req+'\n합메소:'+total_meso+'메소\n여로   :'+total_meso2+'메소');
+      replier.reply(symbol[0]+'에서 '+symbol[1]+'레벨까지\n요구량:'+total_req+'\n여로:'+total_meso+'메소\n츄츄   :'+total_meso2+'메소\n레헬른   :'+total_meso2+'메소\n그외 나머지   :'+total_meso2+'메소');
    }
 }
+/*심볼 ~에서 ~레벨까지
+요구량: ~~~
+합메소:~~메소
+여로:~~메소
+에서 밑으로 바뀜
+
+심볼 ~에서 ~레벨까지
+요구량: ~~~
+여로:~~메소
+츄츄:~~메소
+레헬른:~~메소
+그 외 나머지:~~메소*/
