@@ -18,7 +18,6 @@ function response(room, msg, sender, isGroupChat, replier, ImageDB, packageName,
             return;
          }
       }
-
       for (i=Number(symbol[1]);i<Number(symbol[2]);i++){
          total_req+=i*i+11;
          total_meso+=96900000+88500000*i;
