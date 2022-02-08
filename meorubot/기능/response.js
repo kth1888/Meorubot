@@ -1,7 +1,7 @@
 const room_name=["메이플 머루길드 개발진"];  //여기에 채팅방 이름을 입력하세요
 Jsoup = org.jsoup.Jsoup
 function response(room, msg, sender, isGroupChat, replier, ImageDB, packageName, threadId){
-     if(msg=="!온도{}"){
+     if(msg=="!온도"){
        var temperature = Device.getBatteryTemp()
        if(temperature < 36.5){
           replier.reply('제 온도가 ' + Device.getBatteryTemp() + '°C 에요!\n싸늘하게 식었네요');
