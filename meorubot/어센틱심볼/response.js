@@ -27,7 +27,7 @@ function response(room, msg, sender, isGroupChat, replier, ImageDB, packageName,
       total_meso=total_meso.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
       total_meso2=total_meso2.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
-      replier.reply(symbol[1]+'에서 '+symbol[2]+'레벨까지\n어센틱요구량:'+total_req+'\n세르니움:'+total_meso+'메소\n아르크스:'+total_meso2+'메소');
+      replier.reply(symbol[1]+'에서 '+symbol[2]+'레벨까지\n필요 심볼 개수 : '+total_req+'\n세르니움 : '+total_meso+' 메소\n아르크스 : '+total_meso2+' 메소');
    }
 }
 
