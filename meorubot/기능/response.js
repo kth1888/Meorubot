@@ -1,4 +1,4 @@
-const room_name=["메이플 머루길드 개발진"];  //여기에 채팅방 이름을 입력하세요
+const room_name=["메이플 머루길드 개발진", "메이플 머루길드 단톡방"];  //여기에 채팅방 이름을 입력하세요
 Jsoup = org.jsoup.Jsoup
 function response(room, msg, sender, isGroupChat, replier, ImageDB, packageName, threadId){
      if(msg=="!온도"){
